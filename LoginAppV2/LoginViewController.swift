@@ -19,13 +19,17 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeVC = segue.destination as? WelcomeViewController {
             welcomeVC.userName = userNameTF.text
         }
     }
+    
+    // Пожалуйста, проверьте не раньше понедельника =)
 }
+
+
 
 
 

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,36 +13,36 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginAppV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-D0-lt0">
-                                <rect key="frame" x="16" y="258" width="396" height="100"/>
+                                <rect key="frame" x="16" y="214" width="343" height="100"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Nx-eF-vhw">
-                                        <rect key="frame" x="0.0" y="0.0" width="396" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWr-1c-kKD">
-                                        <rect key="frame" x="0.0" y="66" width="396" height="34"/>
+                                        <rect key="frame" x="0.0" y="66" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-Gw-edu">
-                                <rect key="frame" x="16" y="448" width="133" height="30"/>
+                                <rect key="frame" x="16" y="404" width="133" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot User Name?"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uv-AA-Wdi">
-                                <rect key="frame" x="289" y="448" width="123" height="30"/>
+                                <rect key="frame" x="236" y="404" width="123" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot Password?"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xio-2H-dxT">
-                                <rect key="frame" x="186.66666666666666" y="392" width="55" height="35"/>
+                                <rect key="frame" x="160" y="348" width="55" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
@@ -83,20 +84,11 @@
             <objects>
                 <viewController id="nLq-e6-pXH" customClass="WelcomeViewController" customModule="LoginAppV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y8F-RP-DrM">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SO2-jU-naz">
-                                <rect key="frame" x="152.66666666666666" y="143" width="122.99999999999997" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="u1X-VQ-svo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFX-tM-6oe">
-                                <rect key="frame" x="178.66666666666666" y="593" width="71" height="35"/>
+                                <rect key="frame" x="152" y="368" width="71" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="fPK-bN-K1S"/>
                                 </constraints>
@@ -104,20 +96,35 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome, !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-sd-vJ7">
+                                <rect key="frame" x="16" y="124" width="343" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Okg-Pt-PLo"/>
-                        <color key="backgroundColor" red="0.70108463192723458" green="0.70108463192723458" blue="0.70108463192723458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="SO2-jU-naz" firstAttribute="centerX" secondItem="Y8F-RP-DrM" secondAttribute="centerX" id="FGw-Bk-tj8"/>
-                            <constraint firstItem="SO2-jU-naz" firstAttribute="top" secondItem="Okg-Pt-PLo" secondAttribute="top" constant="99" id="Fa9-Yg-1LT"/>
+                            <constraint firstItem="TJ3-sd-vJ7" firstAttribute="leading" secondItem="Okg-Pt-PLo" secondAttribute="leading" constant="16" id="1gy-2V-1wB"/>
+                            <constraint firstItem="TJ3-sd-vJ7" firstAttribute="top" secondItem="Okg-Pt-PLo" secondAttribute="top" constant="124" id="C2h-Io-4F7"/>
+                            <constraint firstItem="Okg-Pt-PLo" firstAttribute="trailing" secondItem="TJ3-sd-vJ7" secondAttribute="trailing" constant="16" id="IOO-pu-UlH"/>
                             <constraint firstItem="Okg-Pt-PLo" firstAttribute="bottom" secondItem="FFX-tM-6oe" secondAttribute="bottom" constant="244" id="Lwv-DK-vJN"/>
                             <constraint firstItem="FFX-tM-6oe" firstAttribute="centerX" secondItem="Y8F-RP-DrM" secondAttribute="centerX" id="a9x-Po-hLl"/>
+                            <constraint firstItem="TJ3-sd-vJ7" firstAttribute="centerX" secondItem="Y8F-RP-DrM" secondAttribute="centerX" id="zQn-rY-pmv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeNameTF" destination="TJ3-sd-vJ7" id="fl4-2o-o1W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjL-pa-I2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738.78504672897191" y="68.682505399568043"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
