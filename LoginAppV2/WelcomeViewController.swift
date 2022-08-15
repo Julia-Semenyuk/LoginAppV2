@@ -11,6 +11,7 @@ class WelcomeViewController: UIViewController {
 
 
     @IBOutlet var welcomeNameTF: UITextField!
+    @IBOutlet var logOutButtonPressed: UIButton!
     
     var userName: String!
     
@@ -20,13 +21,15 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    private func showAlert(with title: String, and message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        
-        alert.addAction(okAction)
-        present(alert, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is LoginViewController {
+            welcomeNameTF.text = ""
+        }
     }
+    
+    // Я не использовала unwindSegue потому что в конце запуталась в экранах =/ Куда, чего, откуда)
+    // Логично, что unwindSegue должен был исходить из LoginViewController, но я не нашла куда его там прикрутить)
+
 }
 
 

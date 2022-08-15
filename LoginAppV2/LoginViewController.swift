@@ -19,14 +19,39 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
- 
+ //MARK: - Override func
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if userNameTF.text == "User" && passwordTF.text == "Password" {
+            return true
+        } else {
+            showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
+            return false
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeVC = segue.destination as? WelcomeViewController {
             welcomeVC.userName = userNameTF.text
         }
     }
     
-    // Пожалуйста, проверьте не раньше понедельника =)
+    //MARK: - IBAction func
+    @IBAction func forgotUserNameButtonPressed() {
+        showAlert(with: "Oops!", and: "Your name is User")
+    }
+    
+    @IBAction func forgotPasswordButtonPressed() {
+        showAlert(with: "Oops!", and: "Your password is Password")
+    }
+    
+    //MARK: - Alert Controller
+    func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
 
